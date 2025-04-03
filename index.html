@@ -1,0 +1,1782 @@
+
+<style>
+    .timeline-container {
+        display: flex;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        gap: 20px;
+        padding: 20px 0;
+    }
+    .book-item {
+        display: flex;
+        flex: 0 0 auto;
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+        height: 350px;
+        max-width: 160px;
+        position: relative;
+        font-family: sans-serif;
+    }
+    .book-cover {
+        width: 100%;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+        transition: transform 0.3s ease;
+    }
+    .cover-container {
+        height: 290px; /* или сколько тебе подходит */
+        display: flex;
+        align-items: flex-start; /* чтобы обложки начинались с одной линии сверху */
+        justify-content: center;
+    }
+    .book-cover:hover {
+        transform: scale(1.2);
+        z-index: 2;
+    }
+    .tooltip {
+        position: relative;
+        display: inline-block;
+    }
+    .tooltiptext {
+        visibility: hidden;
+        width: 180px;
+        background-color: #222;
+        color: #fff;
+        text-align: left;
+        border-radius: 6px;
+        padding: 8px;
+        position: absolute;
+        z-index: 10;
+        bottom: 110%;
+        left: 50%;
+        transform: translateX(-50%);
+        opacity: 0;
+        transition: opacity 0.3s;
+        font-size: 12px;
+    }
+    .tooltip:hover .tooltiptext {
+        visibility: visible;
+        opacity: 1;
+    }
+    .book-title {
+        font-weight: bold;
+        margin-top: 5px;
+    }
+    .book-year, .book-genre {
+        font-size: 12px;
+        color: #666;
+    }
+
+   .star-rating {
+        display: block;
+        text-align: center;
+        margin-bottom: 20px;
+        font-size: 14px;
+        position: relative;
+        unicode-bidi: bidi-override;
+}
+
+    .stars-outer {
+        color: #ccc;
+        position: relative;
+        display: inline-block;
+        font-size: 18px;
+}
+
+    .stars-outer::before {
+        content: "★★★★★";
+}
+
+    .stars-inner {
+        color: #f39c12;
+        position: absolute;
+        top: 0;
+        left: 0;
+        white-space: nowrap;
+        overflow: hidden;
+        width: 0;
+}
+
+    .stars-inner::before {
+        content: "★★★★★";
+}
+</style>
+
+<div class="timeline-container">
+    
+    <div class="book-item">
+     <div class="book-cover-wrapper">
+        <div class="star-rating">
+            <div class="stars-outer">
+                <div class="stars-inner" style="width: 79.80%;"></div>
+            </div>
+        </div>
+        <div class="tooltip">
+            <div class="cover-container">
+                <img src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1420363280i/13643759.jpg" class="book-cover">
+            </div>      
+         </div> 
+            <div class="book-title">Carrie</div>
+            <div class="book-year">1974</div>
+            </div>
+        
+    </div>
+    
+    <div class="book-item">
+     <div class="book-cover-wrapper">
+        <div class="star-rating">
+            <div class="stars-outer">
+                <div class="stars-inner" style="width: 82.00%;"></div>
+            </div>
+        </div>
+        <div class="tooltip">
+            <div class="cover-container">
+                <img src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1394541201i/1589604.jpg" class="book-cover">
+            </div>      
+         </div> 
+            <div class="book-title">'Salem's Lot</div>
+            <div class="book-year">1975</div>
+            </div>
+        
+    </div>
+    
+    <div class="book-item">
+     <div class="book-cover-wrapper">
+        <div class="star-rating">
+            <div class="stars-outer">
+                <div class="stars-inner" style="width: 85.60%;"></div>
+            </div>
+        </div>
+        <div class="tooltip">
+            <div class="cover-container">
+                <img src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1377161001i/762530.jpg" class="book-cover">
+            </div>      
+         </div> 
+            <div class="book-title">The Shining</div>
+            <div class="book-year">1977</div>
+            </div>
+        
+    </div>
+    
+    <div class="book-item">
+     <div class="book-cover-wrapper">
+        <div class="star-rating">
+            <div class="stars-outer">
+                <div class="stars-inner" style="width: 74.80%;"></div>
+            </div>
+        </div>
+        <div class="tooltip">
+            <div class="cover-container">
+                <img src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1739583311i/66370.jpg" class="book-cover">
+            </div>      
+         </div> 
+            <div class="book-title">Rage</div>
+            <div class="book-year">1977</div>
+            </div>
+        
+    </div>
+    
+    <div class="book-item">
+     <div class="book-cover-wrapper">
+        <div class="star-rating">
+            <div class="stars-outer">
+                <div class="stars-inner" style="width: 80.60%;"></div>
+            </div>
+        </div>
+        <div class="tooltip">
+            <div class="cover-container">
+                <img src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1660820449i/10628.jpg" class="book-cover">
+            </div>      
+         </div> 
+            <div class="book-title">Night Shift</div>
+            <div class="book-year">1978</div>
+            </div>
+        
+    </div>
+    
+    <div class="book-item">
+     <div class="book-cover-wrapper">
+        <div class="star-rating">
+            <div class="stars-outer">
+                <div class="stars-inner" style="width: 87.00%;"></div>
+            </div>
+        </div>
+        <div class="tooltip">
+            <div class="cover-container">
+                <img src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1632211139i/1360681.jpg" class="book-cover">
+            </div>      
+         </div> 
+            <div class="book-title">The Stand</div>
+            <div class="book-year">1978</div>
+            </div>
+        
+    </div>
+    
+    <div class="book-item">
+     <div class="book-cover-wrapper">
+        <div class="star-rating">
+            <div class="stars-outer">
+                <div class="stars-inner" style="width: 81.80%;"></div>
+            </div>
+        </div>
+        <div class="tooltip">
+            <div class="cover-container">
+                <img src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1296474951i/534671.jpg" class="book-cover">
+            </div>      
+         </div> 
+            <div class="book-title">The Long Walk</div>
+            <div class="book-year">1979</div>
+            </div>
+        
+    </div>
+    
+    <div class="book-item">
+     <div class="book-cover-wrapper">
+        <div class="star-rating">
+            <div class="stars-outer">
+                <div class="stars-inner" style="width: 79.40%;"></div>
+            </div>
+        </div>
+        <div class="tooltip">
+            <div class="cover-container">
+                <img src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1392244018i/1210787.jpg" class="book-cover">
+            </div>      
+         </div> 
+            <div class="book-title">The Dead Zone</div>
+            <div class="book-year">1979</div>
+            </div>
+        
+    </div>
+    
+    <div class="book-item">
+     <div class="book-cover-wrapper">
+        <div class="star-rating">
+            <div class="stars-outer">
+                <div class="stars-inner" style="width: 78.20%;"></div>
+            </div>
+        </div>
+        <div class="tooltip">
+            <div class="cover-container">
+                <img src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1320247367i/1470493.jpg" class="book-cover">
+            </div>      
+         </div> 
+            <div class="book-title">Firestarter</div>
+            <div class="book-year">1980</div>
+            </div>
+        
+    </div>
+    
+    <div class="book-item">
+     <div class="book-cover-wrapper">
+        <div class="star-rating">
+            <div class="stars-outer">
+                <div class="stars-inner" style="width: 75.40%;"></div>
+            </div>
+        </div>
+        <div class="tooltip">
+            <div class="cover-container">
+                <img src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1343553923i/233666.jpg" class="book-cover">
+            </div>      
+         </div> 
+            <div class="book-title">Cujo</div>
+            <div class="book-year">1981</div>
+            </div>
+        
+    </div>
+    
+    <div class="book-item">
+     <div class="book-cover-wrapper">
+        <div class="star-rating">
+            <div class="stars-outer">
+                <div class="stars-inner" style="width: 73.20%;"></div>
+            </div>
+        </div>
+        <div class="tooltip">
+            <div class="cover-container">
+                <img src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1309287093i/11563.jpg" class="book-cover">
+            </div>      
+         </div> 
+            <div class="book-title">Danse Macabre</div>
+            <div class="book-year">1981</div>
+            </div>
+        
+    </div>
+    
+    <div class="book-item">
+     <div class="book-cover-wrapper">
+        <div class="star-rating">
+            <div class="stars-outer">
+                <div class="stars-inner" style="width: 72.00%;"></div>
+            </div>
+        </div>
+        <div class="tooltip">
+            <div class="cover-container">
+                <img src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1660316047i/1252583.jpg" class="book-cover">
+            </div>      
+         </div> 
+            <div class="book-title">Roadwork</div>
+            <div class="book-year">1981</div>
+            </div>
+        
+    </div>
+    
+    <div class="book-item">
+     <div class="book-cover-wrapper">
+        <div class="star-rating">
+            <div class="stars-outer">
+                <div class="stars-inner" style="width: 79.60%;"></div>
+            </div>
+        </div>
+        <div class="tooltip">
+            <div class="cover-container">
+                <img src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1258328780i/287625.jpg" class="book-cover">
+            </div>      
+         </div> 
+            <div class="book-title">The Running Man</div>
+            <div class="book-year">1982</div>
+            </div>
+        
+    </div>
+    
+    <div class="book-item">
+     <div class="book-cover-wrapper">
+        <div class="star-rating">
+            <div class="stars-outer">
+                <div class="stars-inner" style="width: 78.60%;"></div>
+            </div>
+        </div>
+        <div class="tooltip">
+            <div class="cover-container">
+                <img src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1213400423i/884573.jpg" class="book-cover">
+            </div>      
+         </div> 
+            <div class="book-title">The Dark Tower: The Gunslinger</div>
+            <div class="book-year">1982</div>
+            </div>
+        
+    </div>
+    
+    <div class="book-item">
+     <div class="book-cover-wrapper">
+        <div class="star-rating">
+            <div class="stars-outer">
+                <div class="stars-inner" style="width: 81.40%;"></div>
+            </div>
+        </div>
+        <div class="tooltip">
+            <div class="cover-container">
+                <img src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1332002598i/11580.jpg" class="book-cover">
+            </div>      
+         </div> 
+            <div class="book-title">Creepshow</div>
+            <div class="book-year">1982</div>
+            </div>
+        
+    </div>
+    
+    <div class="book-item">
+     <div class="book-cover-wrapper">
+        <div class="star-rating">
+            <div class="stars-outer">
+                <div class="stars-inner" style="width: 87.20%;"></div>
+            </div>
+        </div>
+        <div class="tooltip">
+            <div class="cover-container">
+                <img src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1329662611i/39662.jpg" class="book-cover">
+            </div>      
+         </div> 
+            <div class="book-title">Different seasons</div>
+            <div class="book-year">1982</div>
+            </div>
+        
+    </div>
+    
+    <div class="book-item">
+     <div class="book-cover-wrapper">
+        <div class="star-rating">
+            <div class="stars-outer">
+                <div class="stars-inner" style="width: 76.60%;"></div>
+            </div>
+        </div>
+        <div class="tooltip">
+            <div class="cover-container">
+                <img src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1305431833i/408852.jpg" class="book-cover">
+            </div>      
+         </div> 
+            <div class="book-title">Christine</div>
+            <div class="book-year">1983</div>
+            </div>
+        
+    </div>
+    
+    <div class="book-item">
+     <div class="book-cover-wrapper">
+        <div class="star-rating">
+            <div class="stars-outer">
+                <div class="stars-inner" style="width: 81.60%;"></div>
+            </div>
+        </div>
+        <div class="tooltip">
+            <div class="cover-container">
+                <img src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1379369000i/832795.jpg" class="book-cover">
+            </div>      
+         </div> 
+            <div class="book-title">Pet Sematary</div>
+            <div class="book-year">1983</div>
+            </div>
+        
+    </div>
+    
+    <div class="book-item">
+     <div class="book-cover-wrapper">
+        <div class="star-rating">
+            <div class="stars-outer">
+                <div class="stars-inner" style="width: 73.40%;"></div>
+            </div>
+        </div>
+        <div class="tooltip">
+            <div class="cover-container">
+                <img src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1565642120i/550844.jpg" class="book-cover">
+            </div>      
+         </div> 
+            <div class="book-title">Cycle of the Werewolf</div>
+            <div class="book-year">1983</div>
+            </div>
+        
+    </div>
+    
+    <div class="book-item">
+     <div class="book-cover-wrapper">
+        <div class="star-rating">
+            <div class="stars-outer">
+                <div class="stars-inner" style="width: 76.00%;"></div>
+            </div>
+        </div>
+        <div class="tooltip">
+            <div class="cover-container">
+                <img src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1170530286i/59219.jpg" class="book-cover">
+            </div>      
+         </div> 
+            <div class="book-title">The Talisman</div>
+            <div class="book-year">1984</div>
+            </div>
+        
+    </div>
+    
+    <div class="book-item">
+     <div class="book-cover-wrapper">
+        <div class="star-rating">
+            <div class="stars-outer">
+                <div class="stars-inner" style="width: 75.60%;"></div>
+            </div>
+        </div>
+        <div class="tooltip">
+            <div class="cover-container">
+                <img src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1554308961i/10605.jpg" class="book-cover">
+            </div>      
+         </div> 
+            <div class="book-title">Thinner</div>
+            <div class="book-year">1984</div>
+            </div>
+        
+    </div>
+    
+    <div class="book-item">
+     <div class="book-cover-wrapper">
+        <div class="star-rating">
+            <div class="stars-outer">
+                <div class="stars-inner" style="width: 83.00%;"></div>
+            </div>
+        </div>
+        <div class="tooltip">
+            <div class="cover-container">
+                <img src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1374049003i/10617.jpg" class="book-cover">
+            </div>      
+         </div> 
+            <div class="book-title">The Bachman Books</div>
+            <div class="book-year">1985</div>
+            </div>
+        
+    </div>
+    
+    <div class="book-item">
+     <div class="book-cover-wrapper">
+        <div class="star-rating">
+            <div class="stars-outer">
+                <div class="stars-inner" style="width: 79.40%;"></div>
+            </div>
+        </div>
+        <div class="tooltip">
+            <div class="cover-container">
+                <img src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1660827280i/13440.jpg" class="book-cover">
+            </div>      
+         </div> 
+            <div class="book-title">Skeleton Crew</div>
+            <div class="book-year">1985</div>
+            </div>
+        
+    </div>
+    
+    <div class="book-item">
+     <div class="book-cover-wrapper">
+        <div class="star-rating">
+            <div class="stars-outer">
+                <div class="stars-inner" style="width: 85.00%;"></div>
+            </div>
+        </div>
+        <div class="tooltip">
+            <div class="cover-container">
+                <img src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1334416842i/830502.jpg" class="book-cover">
+            </div>      
+         </div> 
+            <div class="book-title">It</div>
+            <div class="book-year">1986</div>
+            </div>
+        
+    </div>
+    
+    <div class="book-item">
+     <div class="book-cover-wrapper">
+        <div class="star-rating">
+            <div class="stars-outer">
+                <div class="stars-inner" style="width: 78.80%;"></div>
+            </div>
+        </div>
+        <div class="tooltip">
+            <div class="cover-container">
+                <img src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1660526231i/10611.jpg" class="book-cover">
+            </div>      
+         </div> 
+            <div class="book-title">The Eyes of the Dragon</div>
+            <div class="book-year">1987</div>
+            </div>
+        
+    </div>
+    
+    <div class="book-item">
+     <div class="book-cover-wrapper">
+        <div class="star-rating">
+            <div class="stars-outer">
+                <div class="stars-inner" style="width: 84.60%;"></div>
+            </div>
+        </div>
+        <div class="tooltip">
+            <div class="cover-container">
+                <img src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1689709116i/193303557.jpg" class="book-cover">
+            </div>      
+         </div> 
+            <div class="book-title">The Dark Tower II: The Drawing of the Three</div>
+            <div class="book-year">1987</div>
+            </div>
+        
+    </div>
+    
+    <div class="book-item">
+     <div class="book-cover-wrapper">
+        <div class="star-rating">
+            <div class="stars-outer">
+                <div class="stars-inner" style="width: 84.20%;"></div>
+            </div>
+        </div>
+        <div class="tooltip">
+            <div class="cover-container">
+                <img src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1554220401i/10614.jpg" class="book-cover">
+            </div>      
+         </div> 
+            <div class="book-title">Misery</div>
+            <div class="book-year">1987</div>
+            </div>
+        
+    </div>
+    
+    <div class="book-item">
+     <div class="book-cover-wrapper">
+        <div class="star-rating">
+            <div class="stars-outer">
+                <div class="stars-inner" style="width: 71.60%;"></div>
+            </div>
+        </div>
+        <div class="tooltip">
+            <div class="cover-container">
+                <img src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1394210331i/17660.jpg" class="book-cover">
+            </div>      
+         </div> 
+            <div class="book-title">The Tommyknockers</div>
+            <div class="book-year">1987</div>
+            </div>
+        
+    </div>
+    
+    <div class="book-item">
+     <div class="book-cover-wrapper">
+        <div class="star-rating">
+            <div class="stars-outer">
+                <div class="stars-inner" style="width: 80.60%;"></div>
+            </div>
+        </div>
+        <div class="tooltip">
+            <div class="cover-container">
+                <img src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1314769475i/116334.jpg" class="book-cover">
+            </div>      
+         </div> 
+            <div class="book-title">Nightmares in the Sky</div>
+            <div class="book-year">1988</div>
+            </div>
+        
+    </div>
+    
+    <div class="book-item">
+     <div class="book-cover-wrapper">
+        <div class="star-rating">
+            <div class="stars-outer">
+                <div class="stars-inner" style="width: 76.00%;"></div>
+            </div>
+        </div>
+        <div class="tooltip">
+            <div class="cover-container">
+                <img src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1430122353i/11597.jpg" class="book-cover">
+            </div>      
+         </div> 
+            <div class="book-title">The Dark Half</div>
+            <div class="book-year">1989</div>
+            </div>
+        
+    </div>
+    
+    <div class="book-item">
+     <div class="book-cover-wrapper">
+        <div class="star-rating">
+            <div class="stars-outer">
+                <div class="stars-inner" style="width: 79.00%;"></div>
+            </div>
+        </div>
+        <div class="tooltip">
+            <div class="cover-container">
+                <img src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1321023197i/133266.jpg" class="book-cover">
+            </div>      
+         </div> 
+            <div class="book-title">Four Past Midnight</div>
+            <div class="book-year">1990</div>
+            </div>
+        
+    </div>
+    
+    <div class="book-item">
+     <div class="book-cover-wrapper">
+        <div class="star-rating">
+            <div class="stars-outer">
+                <div class="stars-inner" style="width: 85.00%;"></div>
+            </div>
+        </div>
+        <div class="tooltip">
+            <div class="cover-container">
+                <img src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1697061868l/199436209.jpg" class="book-cover">
+            </div>      
+         </div> 
+            <div class="book-title">The Dark Tower III: The Waste Lands</div>
+            <div class="book-year">1991</div>
+            </div>
+        
+    </div>
+    
+    <div class="book-item">
+     <div class="book-cover-wrapper">
+        <div class="star-rating">
+            <div class="stars-outer">
+                <div class="stars-inner" style="width: 83.00%;"></div>
+            </div>
+        </div>
+        <div class="tooltip">
+            <div class="cover-container">
+                <img src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1556477076i/1011198.jpg" class="book-cover">
+            </div>      
+         </div> 
+            <div class="book-title">Needful Things</div>
+            <div class="book-year">1991</div>
+            </div>
+        
+    </div>
+    
+    <div class="book-item">
+     <div class="book-cover-wrapper">
+        <div class="star-rating">
+            <div class="stars-outer">
+                <div class="stars-inner" style="width: 78.80%;"></div>
+            </div>
+        </div>
+        <div class="tooltip">
+            <div class="cover-container">
+                <img src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1722442797i/7278752.jpg" class="book-cover">
+            </div>      
+         </div> 
+            <div class="book-title">Dolores Claiborne</div>
+            <div class="book-year">1992</div>
+            </div>
+        
+    </div>
+    
+    <div class="book-item">
+     <div class="book-cover-wrapper">
+        <div class="star-rating">
+            <div class="stars-outer">
+                <div class="stars-inner" style="width: 71.20%;"></div>
+            </div>
+        </div>
+        <div class="tooltip">
+            <div class="cover-container">
+                <img src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1297737756i/32692.jpg" class="book-cover">
+            </div>      
+         </div> 
+            <div class="book-title">Gerald's Game</div>
+            <div class="book-year">1992</div>
+            </div>
+        
+    </div>
+    
+    <div class="book-item">
+     <div class="book-cover-wrapper">
+        <div class="star-rating">
+            <div class="stars-outer">
+                <div class="stars-inner" style="width: 81.80%;"></div>
+            </div>
+        </div>
+        <div class="tooltip">
+            <div class="cover-container">
+                <img src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1328048614i/5631481.jpg" class="book-cover">
+            </div>      
+         </div> 
+            <div class="book-title">Nightmares & Dreamscapes</div>
+            <div class="book-year">1993</div>
+            </div>
+        
+    </div>
+    
+    <div class="book-item">
+     <div class="book-cover-wrapper">
+        <div class="star-rating">
+            <div class="stars-outer">
+                <div class="stars-inner" style="width: 76.80%;"></div>
+            </div>
+        </div>
+        <div class="tooltip">
+            <div class="cover-container">
+                <img src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1678392358i/10585.jpg" class="book-cover">
+            </div>      
+         </div> 
+            <div class="book-title">Insomnia</div>
+            <div class="book-year">1994</div>
+            </div>
+        
+    </div>
+    
+    <div class="book-item">
+     <div class="book-cover-wrapper">
+        <div class="star-rating">
+            <div class="stars-outer">
+                <div class="stars-inner" style="width: 74.80%;"></div>
+            </div>
+        </div>
+        <div class="tooltip">
+            <div class="cover-container">
+                <img src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1660826989i/10619.jpg" class="book-cover">
+            </div>      
+         </div> 
+            <div class="book-title">Rose Madder</div>
+            <div class="book-year">1995</div>
+            </div>
+        
+    </div>
+    
+    <div class="book-item">
+     <div class="book-cover-wrapper">
+        <div class="star-rating">
+            <div class="stars-outer">
+                <div class="stars-inner" style="width: 89.60%;"></div>
+            </div>
+        </div>
+        <div class="tooltip">
+            <div class="cover-container">
+                <img src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1373903563i/11566.jpg" class="book-cover">
+            </div>      
+         </div> 
+            <div class="book-title">The Green Mile</div>
+            <div class="book-year">1996</div>
+            </div>
+        
+    </div>
+    
+    <div class="book-item">
+     <div class="book-cover-wrapper">
+        <div class="star-rating">
+            <div class="stars-outer">
+                <div class="stars-inner" style="width: 77.20%;"></div>
+            </div>
+        </div>
+        <div class="tooltip">
+            <div class="cover-container">
+                <img src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1395764566i/10584.jpg" class="book-cover">
+            </div>      
+         </div> 
+            <div class="book-title">Desperation</div>
+            <div class="book-year">1996</div>
+            </div>
+        
+    </div>
+    
+    <div class="book-item">
+     <div class="book-cover-wrapper">
+        <div class="star-rating">
+            <div class="stars-outer">
+                <div class="stars-inner" style="width: 74.40%;"></div>
+            </div>
+        </div>
+        <div class="tooltip">
+            <div class="cover-container">
+                <img src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1554402378i/10596.jpg" class="book-cover">
+            </div>      
+         </div> 
+            <div class="book-title">The Regulators</div>
+            <div class="book-year">1996</div>
+            </div>
+        
+    </div>
+    
+    <div class="book-item">
+     <div class="book-cover-wrapper">
+        <div class="star-rating">
+            <div class="stars-outer">
+                <div class="stars-inner" style="width: 85.20%;"></div>
+            </div>
+        </div>
+        <div class="tooltip">
+            <div class="cover-container">
+                <img src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1699828194i/159264486.jpg" class="book-cover">
+            </div>      
+         </div> 
+            <div class="book-title">The Dark Tower IV: Wizard and Glass</div>
+            <div class="book-year">1997</div>
+            </div>
+        
+    </div>
+    
+    <div class="book-item">
+     <div class="book-cover-wrapper">
+        <div class="star-rating">
+            <div class="stars-outer">
+                <div class="stars-inner" style="width: 78.40%;"></div>
+            </div>
+        </div>
+        <div class="tooltip">
+            <div class="cover-container">
+                <img src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1365592796i/10589.jpg" class="book-cover">
+            </div>      
+         </div> 
+            <div class="book-title">Bag of Bones</div>
+            <div class="book-year">1998</div>
+            </div>
+        
+    </div>
+    
+    <div class="book-item">
+     <div class="book-cover-wrapper">
+        <div class="star-rating">
+            <div class="stars-outer">
+                <div class="stars-inner" style="width: 77.00%;"></div>
+            </div>
+        </div>
+        <div class="tooltip">
+            <div class="cover-container">
+                <img src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1698996326i/161896511.jpg" class="book-cover">
+            </div>      
+         </div> 
+            <div class="book-title">Hearts in Atlantis</div>
+            <div class="book-year">1999</div>
+            </div>
+        
+    </div>
+    
+    <div class="book-item">
+     <div class="book-cover-wrapper">
+        <div class="star-rating">
+            <div class="stars-outer">
+                <div class="stars-inner" style="width: 78.00%;"></div>
+            </div>
+        </div>
+        <div class="tooltip">
+            <div class="cover-container">
+                <img src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1388202934i/32667.jpg" class="book-cover">
+            </div>      
+         </div> 
+            <div class="book-title">Blood and Smoke</div>
+            <div class="book-year">1999</div>
+            </div>
+        
+    </div>
+    
+    <div class="book-item">
+     <div class="book-cover-wrapper">
+        <div class="star-rating">
+            <div class="stars-outer">
+                <div class="stars-inner" style="width: 79.00%;"></div>
+            </div>
+        </div>
+        <div class="tooltip">
+            <div class="cover-container">
+                <img src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1685034954i/13451.jpg" class="book-cover">
+            </div>      
+         </div> 
+            <div class="book-title">Storm of the Century</div>
+            <div class="book-year">1999</div>
+            </div>
+        
+    </div>
+    
+    <div class="book-item">
+     <div class="book-cover-wrapper">
+        <div class="star-rating">
+            <div class="stars-outer">
+                <div class="stars-inner" style="width: 72.80%;"></div>
+            </div>
+        </div>
+        <div class="tooltip">
+            <div class="cover-container">
+                <img src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1580235339i/11564.jpg" class="book-cover">
+            </div>      
+         </div> 
+            <div class="book-title">The Girl Who Loved Tom Gordon</div>
+            <div class="book-year">1999</div>
+            </div>
+        
+    </div>
+    
+    <div class="book-item">
+     <div class="book-cover-wrapper">
+        <div class="star-rating">
+            <div class="stars-outer">
+                <div class="stars-inner" style="width: 86.80%;"></div>
+            </div>
+        </div>
+        <div class="tooltip">
+            <div class="cover-container">
+                <img src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1436735207i/10569.jpg" class="book-cover">
+            </div>      
+         </div> 
+            <div class="book-title">On Writing</div>
+            <div class="book-year">2000</div>
+            </div>
+        
+    </div>
+    
+    <div class="book-item">
+     <div class="book-cover-wrapper">
+        <div class="star-rating">
+            <div class="stars-outer">
+                <div class="stars-inner" style="width: 81.80%;"></div>
+            </div>
+        </div>
+        <div class="tooltip">
+            <div class="cover-container">
+                <img src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1672372623i/11596.jpg" class="book-cover">
+            </div>      
+         </div> 
+            <div class="book-title">Secret Windows: Essays and Fiction on the Craft of Writing</div>
+            <div class="book-year">2000</div>
+            </div>
+        
+    </div>
+    
+    <div class="book-item">
+     <div class="book-cover-wrapper">
+        <div class="star-rating">
+            <div class="stars-outer">
+                <div class="stars-inner" style="width: 71.80%;"></div>
+            </div>
+        </div>
+        <div class="tooltip">
+            <div class="cover-container">
+                <img src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1696124529i/130652371.jpg" class="book-cover">
+            </div>      
+         </div> 
+            <div class="book-title">The Plant</div>
+            <div class="book-year">2000</div>
+            </div>
+        
+    </div>
+    
+    <div class="book-item">
+     <div class="book-cover-wrapper">
+        <div class="star-rating">
+            <div class="stars-outer">
+                <div class="stars-inner" style="width: 73.00%;"></div>
+            </div>
+        </div>
+        <div class="tooltip">
+            <div class="cover-container">
+                <img src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1611766265i/11570.jpg" class="book-cover">
+            </div>      
+         </div> 
+            <div class="book-title">Dreamcatcher</div>
+            <div class="book-year">2001</div>
+            </div>
+        
+    </div>
+    
+    <div class="book-item">
+     <div class="book-cover-wrapper">
+        <div class="star-rating">
+            <div class="stars-outer">
+                <div class="stars-inner" style="width: 80.60%;"></div>
+            </div>
+        </div>
+        <div class="tooltip">
+            <div class="cover-container">
+                <img src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1388263466i/10607.jpg" class="book-cover">
+            </div>      
+         </div> 
+            <div class="book-title">Black House</div>
+            <div class="book-year">2001</div>
+            </div>
+        
+    </div>
+    
+    <div class="book-item">
+     <div class="book-cover-wrapper">
+        <div class="star-rating">
+            <div class="stars-outer">
+                <div class="stars-inner" style="width: 79.40%;"></div>
+            </div>
+        </div>
+        <div class="tooltip">
+            <div class="cover-container">
+                <img src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1386922876i/10579.jpg" class="book-cover">
+            </div>      
+         </div> 
+            <div class="book-title">Everything's Eventual</div>
+            <div class="book-year">2002</div>
+            </div>
+        
+    </div>
+    
+    <div class="book-item">
+     <div class="book-cover-wrapper">
+        <div class="star-rating">
+            <div class="stars-outer">
+                <div class="stars-inner" style="width: 69.60%;"></div>
+            </div>
+        </div>
+        <div class="tooltip">
+            <div class="cover-container">
+                <img src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1304686732i/22076.jpg" class="book-cover">
+            </div>      
+         </div> 
+            <div class="book-title">From a Buick 8</div>
+            <div class="book-year">2002</div>
+            </div>
+        
+    </div>
+    
+    <div class="book-item">
+     <div class="book-cover-wrapper">
+        <div class="star-rating">
+            <div class="stars-outer">
+                <div class="stars-inner" style="width: 84.00%;"></div>
+            </div>
+        </div>
+        <div class="tooltip">
+            <div class="cover-container">
+                <img src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1573012198i/48716743.jpg" class="book-cover">
+            </div>      
+         </div> 
+            <div class="book-title">The Dark Tower V: Wolves of the Calla</div>
+            <div class="book-year">2003</div>
+            </div>
+        
+    </div>
+    
+    <div class="book-item">
+     <div class="book-cover-wrapper">
+        <div class="star-rating">
+            <div class="stars-outer">
+                <div class="stars-inner" style="width: 85.40%;"></div>
+            </div>
+        </div>
+        <div class="tooltip">
+            <div class="cover-container">
+                <img src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1387707235i/19727005.jpg" class="book-cover">
+            </div>      
+         </div> 
+            <div class="book-title">The Dark Tower VII: The Dark Tower</div>
+            <div class="book-year">2004</div>
+            </div>
+        
+    </div>
+    
+    <div class="book-item">
+     <div class="book-cover-wrapper">
+        <div class="star-rating">
+            <div class="stars-outer">
+                <div class="stars-inner" style="width: 80.00%;"></div>
+            </div>
+        </div>
+        <div class="tooltip">
+            <div class="cover-container">
+                <img src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1554221361i/5093.jpg" class="book-cover">
+            </div>      
+         </div> 
+            <div class="book-title">The Dark Tower VI: Song of Susannah</div>
+            <div class="book-year">2004</div>
+            </div>
+        
+    </div>
+    
+    <div class="book-item">
+     <div class="book-cover-wrapper">
+        <div class="star-rating">
+            <div class="stars-outer">
+                <div class="stars-inner" style="width: 67.60%;"></div>
+            </div>
+        </div>
+        <div class="tooltip">
+            <div class="cover-container">
+                <img src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1422099676i/10574.jpg" class="book-cover">
+            </div>      
+         </div> 
+            <div class="book-title">The Colorado Kid</div>
+            <div class="book-year">2005</div>
+            </div>
+        
+    </div>
+    
+    <div class="book-item">
+     <div class="book-cover-wrapper">
+        <div class="star-rating">
+            <div class="stars-outer">
+                <div class="stars-inner" style="width: 73.20%;"></div>
+            </div>
+        </div>
+        <div class="tooltip">
+            <div class="cover-container">
+                <img src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1432828013i/10567.jpg" class="book-cover">
+            </div>      
+         </div> 
+            <div class="book-title">Cell</div>
+            <div class="book-year">2006</div>
+            </div>
+        
+    </div>
+    
+    <div class="book-item">
+     <div class="book-cover-wrapper">
+        <div class="star-rating">
+            <div class="stars-outer">
+                <div class="stars-inner" style="width: 74.00%;"></div>
+            </div>
+        </div>
+        <div class="tooltip">
+            <div class="cover-container">
+                <img src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1316346037i/10566.jpg" class="book-cover">
+            </div>      
+         </div> 
+            <div class="book-title">Lisey's Story</div>
+            <div class="book-year">2006</div>
+            </div>
+        
+    </div>
+    
+    <div class="book-item">
+     <div class="book-cover-wrapper">
+        <div class="star-rating">
+            <div class="stars-outer">
+                <div class="stars-inner" style="width: 75.00%;"></div>
+            </div>
+        </div>
+        <div class="tooltip">
+            <div class="cover-container">
+                <img src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1442600647i/349473.jpg" class="book-cover">
+            </div>      
+         </div> 
+            <div class="book-title">Blaze</div>
+            <div class="book-year">2007</div>
+            </div>
+        
+    </div>
+    
+    <div class="book-item">
+     <div class="book-cover-wrapper">
+        <div class="star-rating">
+            <div class="stars-outer">
+                <div class="stars-inner" style="width: 79.40%;"></div>
+            </div>
+        </div>
+        <div class="tooltip">
+            <div class="cover-container">
+                <img src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1620172619i/472343.jpg" class="book-cover">
+            </div>      
+         </div> 
+            <div class="book-title">Duma Key</div>
+            <div class="book-year">2008</div>
+            </div>
+        
+    </div>
+    
+    <div class="book-item">
+     <div class="book-cover-wrapper">
+        <div class="star-rating">
+            <div class="stars-outer">
+                <div class="stars-inner" style="width: 77.60%;"></div>
+            </div>
+        </div>
+        <div class="tooltip">
+            <div class="cover-container">
+                <img src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1348108664i/2906039.jpg" class="book-cover">
+            </div>      
+         </div> 
+            <div class="book-title">Just After Sunset</div>
+            <div class="book-year">2008</div>
+            </div>
+        
+    </div>
+    
+    <div class="book-item">
+     <div class="book-cover-wrapper">
+        <div class="star-rating">
+            <div class="stars-outer">
+                <div class="stars-inner" style="width: 78.40%;"></div>
+            </div>
+        </div>
+        <div class="tooltip">
+            <div class="cover-container">
+                <img src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1347717414i/3583368.jpg" class="book-cover">
+            </div>      
+         </div> 
+            <div class="book-title">Stephen King Goes to the Movies</div>
+            <div class="book-year">2009</div>
+            </div>
+        
+    </div>
+    
+    <div class="book-item">
+     <div class="book-cover-wrapper">
+        <div class="star-rating">
+            <div class="stars-outer">
+                <div class="stars-inner" style="width: 75.20%;"></div>
+            </div>
+        </div>
+        <div class="tooltip">
+            <div class="cover-container">
+                <img src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1295433746i/6251012.jpg" class="book-cover">
+            </div>      
+         </div> 
+            <div class="book-title">Ur</div>
+            <div class="book-year">2009</div>
+            </div>
+        
+    </div>
+    
+    <div class="book-item">
+     <div class="book-cover-wrapper">
+        <div class="star-rating">
+            <div class="stars-outer">
+                <div class="stars-inner" style="width: 78.60%;"></div>
+            </div>
+        </div>
+        <div class="tooltip">
+            <div class="cover-container">
+                <img src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1511289992i/6320534.jpg" class="book-cover">
+            </div>      
+         </div> 
+            <div class="book-title">Under the Dome</div>
+            <div class="book-year">2009</div>
+            </div>
+        
+    </div>
+    
+    <div class="book-item">
+     <div class="book-cover-wrapper">
+        <div class="star-rating">
+            <div class="stars-outer">
+                <div class="stars-inner" style="width: 81.40%;"></div>
+            </div>
+        </div>
+        <div class="tooltip">
+            <div class="cover-container">
+                <img src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1524583257i/7912007.jpg" class="book-cover">
+            </div>      
+         </div> 
+            <div class="book-title">Full Dark, No Stars</div>
+            <div class="book-year">2010</div>
+            </div>
+        
+    </div>
+    
+    <div class="book-item">
+     <div class="book-cover-wrapper">
+        <div class="star-rating">
+            <div class="stars-outer">
+                <div class="stars-inner" style="width: 69.40%;"></div>
+            </div>
+        </div>
+        <div class="tooltip">
+            <div class="cover-container">
+                <img src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1347704033i/7940591.jpg" class="book-cover">
+            </div>      
+         </div> 
+            <div class="book-title">Blockade Billy</div>
+            <div class="book-year">2010</div>
+            </div>
+        
+    </div>
+    
+    <div class="book-item">
+     <div class="book-cover-wrapper">
+        <div class="star-rating">
+            <div class="stars-outer">
+                <div class="stars-inner" style="width: 86.60%;"></div>
+            </div>
+        </div>
+        <div class="tooltip">
+            <div class="cover-container">
+                <img src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1677832819i/36605677.jpg" class="book-cover">
+            </div>      
+         </div> 
+            <div class="book-title">11/22 1963</div>
+            <div class="book-year">2011</div>
+            </div>
+        
+    </div>
+    
+    <div class="book-item">
+     <div class="book-cover-wrapper">
+        <div class="star-rating">
+            <div class="stars-outer">
+                <div class="stars-inner" style="width: 73.40%;"></div>
+            </div>
+        </div>
+        <div class="tooltip">
+            <div class="cover-container">
+                <img src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1407138212i/12070846.jpg" class="book-cover">
+            </div>      
+         </div> 
+            <div class="book-title">Mile 81</div>
+            <div class="book-year">2011</div>
+            </div>
+        
+    </div>
+    
+    <div class="book-item">
+     <div class="book-cover-wrapper">
+        <div class="star-rating">
+            <div class="stars-outer">
+                <div class="stars-inner" style="width: 83.00%;"></div>
+            </div>
+        </div>
+        <div class="tooltip">
+            <div class="cover-container">
+                <img src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1328001524i/12341557.jpg" class="book-cover">
+            </div>      
+         </div> 
+            <div class="book-title">The Dark Tower: The Wind Through the Keyhole</div>
+            <div class="book-year">2012</div>
+            </div>
+        
+    </div>
+    
+    <div class="book-item">
+     <div class="book-cover-wrapper">
+        <div class="star-rating">
+            <div class="stars-outer">
+                <div class="stars-inner" style="width: 72.60%;"></div>
+            </div>
+        </div>
+        <div class="tooltip">
+            <div class="cover-container">
+                <img src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1346688418i/15825932.jpg" class="book-cover">
+            </div>      
+         </div> 
+            <div class="book-title">In the Tall Grass </div>
+            <div class="book-year">2012</div>
+            </div>
+        
+    </div>
+    
+    <div class="book-item">
+     <div class="book-cover-wrapper">
+        <div class="star-rating">
+            <div class="stars-outer">
+                <div class="stars-inner" style="width: 72.80%;"></div>
+            </div>
+        </div>
+        <div class="tooltip">
+            <div class="cover-container">
+                <img src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1551261733i/15803680.jpg" class="book-cover">
+            </div>      
+         </div> 
+            <div class="book-title">A Face in the Crowd</div>
+            <div class="book-year">2012</div>
+            </div>
+        
+    </div>
+    
+    <div class="book-item">
+     <div class="book-cover-wrapper">
+        <div class="star-rating">
+            <div class="stars-outer">
+                <div class="stars-inner" style="width: 78.60%;"></div>
+            </div>
+        </div>
+        <div class="tooltip">
+            <div class="cover-container">
+                <img src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1348154483i/13596166.jpg" class="book-cover">
+            </div>      
+         </div> 
+            <div class="book-title">Joyland</div>
+            <div class="book-year">2013</div>
+            </div>
+        
+    </div>
+    
+    <div class="book-item">
+     <div class="book-cover-wrapper">
+        <div class="star-rating">
+            <div class="stars-outer">
+                <div class="stars-inner" style="width: 82.60%;"></div>
+            </div>
+        </div>
+        <div class="tooltip">
+            <div class="cover-container">
+                <img src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1510335480i/16130549.jpg" class="book-cover">
+            </div>      
+         </div> 
+            <div class="book-title">Doctor Sleep</div>
+            <div class="book-year">2013</div>
+            </div>
+        
+    </div>
+    
+    <div class="book-item">
+     <div class="book-cover-wrapper">
+        <div class="star-rating">
+            <div class="stars-outer">
+                <div class="stars-inner" style="width: 80.60%;"></div>
+            </div>
+        </div>
+        <div class="tooltip">
+            <div class="cover-container">
+                <img src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1468705326i/18775247.jpg" class="book-cover">
+            </div>      
+         </div> 
+            <div class="book-title">Mr. Mercedes</div>
+            <div class="book-year">2014</div>
+            </div>
+        
+    </div>
+    
+    <div class="book-item">
+     <div class="book-cover-wrapper">
+        <div class="star-rating">
+            <div class="stars-outer">
+                <div class="stars-inner" style="width: 76.20%;"></div>
+            </div>
+        </div>
+        <div class="tooltip">
+            <div class="cover-container">
+                <img src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1510335323i/20926278.jpg" class="book-cover">
+            </div>      
+         </div> 
+            <div class="book-title">Revival</div>
+            <div class="book-year">2014</div>
+            </div>
+        
+    </div>
+    
+    <div class="book-item">
+     <div class="book-cover-wrapper">
+        <div class="star-rating">
+            <div class="stars-outer">
+                <div class="stars-inner" style="width: 81.20%;"></div>
+            </div>
+        </div>
+        <div class="tooltip">
+            <div class="cover-container">
+                <img src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1469092087i/23492589.jpg" class="book-cover">
+            </div>      
+         </div> 
+            <div class="book-title">Finders Keepers</div>
+            <div class="book-year">2015</div>
+            </div>
+        
+    </div>
+    
+    <div class="book-item">
+     <div class="book-cover-wrapper">
+        <div class="star-rating">
+            <div class="stars-outer">
+                <div class="stars-inner" style="width: 78.40%;"></div>
+            </div>
+        </div>
+        <div class="tooltip">
+            <div class="cover-container">
+                <img src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1468705688i/23512999.jpg" class="book-cover">
+            </div>      
+         </div> 
+            <div class="book-title">The Bazaar of Bad Dreams</div>
+            <div class="book-year">2015</div>
+            </div>
+        
+    </div>
+    
+    <div class="book-item">
+     <div class="book-cover-wrapper">
+        <div class="star-rating">
+            <div class="stars-outer">
+                <div class="stars-inner" style="width: 81.80%;"></div>
+            </div>
+        </div>
+        <div class="tooltip">
+            <div class="cover-container">
+                <img src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1511289068i/25526965.jpg" class="book-cover">
+            </div>      
+         </div> 
+            <div class="book-title">End of Watch</div>
+            <div class="book-year">2016</div>
+            </div>
+        
+    </div>
+    
+    <div class="book-item">
+     <div class="book-cover-wrapper">
+        <div class="star-rating">
+            <div class="stars-outer">
+                <div class="stars-inner" style="width: 74.60%;"></div>
+            </div>
+        </div>
+        <div class="tooltip">
+            <div class="cover-container">
+                <img src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1510335748i/34466922.jpg" class="book-cover">
+            </div>      
+         </div> 
+            <div class="book-title">Sleeping Beauties</div>
+            <div class="book-year">2017</div>
+            </div>
+        
+    </div>
+    
+    <div class="book-item">
+     <div class="book-cover-wrapper">
+        <div class="star-rating">
+            <div class="stars-outer">
+                <div class="stars-inner" style="width: 78.60%;"></div>
+            </div>
+        </div>
+        <div class="tooltip">
+            <div class="cover-container">
+                <img src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1488303321i/34430839.jpg" class="book-cover">
+            </div>      
+         </div> 
+            <div class="book-title">Gwendy's Button Box</div>
+            <div class="book-year">2017</div>
+            </div>
+        
+    </div>
+    
+    <div class="book-item">
+     <div class="book-cover-wrapper">
+        <div class="star-rating">
+            <div class="stars-outer">
+                <div class="stars-inner" style="width: 80.20%;"></div>
+            </div>
+        </div>
+        <div class="tooltip">
+            <div class="cover-container">
+                <img src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1524596540i/36124936.jpg" class="book-cover">
+            </div>      
+         </div> 
+            <div class="book-title">The Outsider</div>
+            <div class="book-year">2018</div>
+            </div>
+        
+    </div>
+    
+    <div class="book-item">
+     <div class="book-cover-wrapper">
+        <div class="star-rating">
+            <div class="stars-outer">
+                <div class="stars-inner" style="width: 73.00%;"></div>
+            </div>
+        </div>
+        <div class="tooltip">
+            <div class="cover-container">
+                <img src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1542040067i/38355410.jpg" class="book-cover">
+            </div>      
+         </div> 
+            <div class="book-title">Elevation</div>
+            <div class="book-year">2018</div>
+            </div>
+        
+    </div>
+    
+    <div class="book-item">
+     <div class="book-cover-wrapper">
+        <div class="star-rating">
+            <div class="stars-outer">
+                <div class="stars-inner" style="width: 84.00%;"></div>
+            </div>
+        </div>
+        <div class="tooltip">
+            <div class="cover-container">
+                <img src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1549241208i/43798285.jpg" class="book-cover">
+            </div>      
+         </div> 
+            <div class="book-title">The Institute</div>
+            <div class="book-year">2019</div>
+            </div>
+        
+    </div>
+    
+    <div class="book-item">
+     <div class="book-cover-wrapper">
+        <div class="star-rating">
+            <div class="stars-outer">
+                <div class="stars-inner" style="width: 79.60%;"></div>
+            </div>
+        </div>
+        <div class="tooltip">
+            <div class="cover-container">
+                <img src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1571399830i/46015758.jpg" class="book-cover">
+            </div>      
+         </div> 
+            <div class="book-title">If It Bleeds</div>
+            <div class="book-year">2020</div>
+            </div>
+        
+    </div>
+    
+    <div class="book-item">
+     <div class="book-cover-wrapper">
+        <div class="star-rating">
+            <div class="stars-outer">
+                <div class="stars-inner" style="width: 79.40%;"></div>
+            </div>
+        </div>
+        <div class="tooltip">
+            <div class="cover-container">
+                <img src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1596448456i/54798175.jpg" class="book-cover">
+            </div>      
+         </div> 
+            <div class="book-title">Later</div>
+            <div class="book-year">2021</div>
+            </div>
+        
+    </div>
+    
+    <div class="book-item">
+     <div class="book-cover-wrapper">
+        <div class="star-rating">
+            <div class="stars-outer">
+                <div class="stars-inner" style="width: 84.40%;"></div>
+            </div>
+        </div>
+        <div class="tooltip">
+            <div class="cover-container">
+                <img src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1618151020i/56852407.jpg" class="book-cover">
+            </div>      
+         </div> 
+            <div class="book-title">Billy Summers</div>
+            <div class="book-year">2021</div>
+            </div>
+        
+    </div>
+    
+    <div class="book-item">
+     <div class="book-cover-wrapper">
+        <div class="star-rating">
+            <div class="stars-outer">
+                <div class="stars-inner" style="width: 82.20%;"></div>
+            </div>
+        </div>
+        <div class="tooltip">
+            <div class="cover-container">
+                <img src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1651710894i/59366265.jpg" class="book-cover">
+            </div>      
+         </div> 
+            <div class="book-title">Gwendy's Final Task</div>
+            <div class="book-year">2022</div>
+            </div>
+        
+    </div>
+    
+    <div class="book-item">
+     <div class="book-cover-wrapper">
+        <div class="star-rating">
+            <div class="stars-outer">
+                <div class="stars-inner" style="width: 83.00%;"></div>
+            </div>
+        </div>
+        <div class="tooltip">
+            <div class="cover-container">
+                <img src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1647789287i/60177373.jpg" class="book-cover">
+            </div>      
+         </div> 
+            <div class="book-title">Fairy Tale</div>
+            <div class="book-year">2022</div>
+            </div>
+        
+    </div>
+    
+    <div class="book-item">
+     <div class="book-cover-wrapper">
+        <div class="star-rating">
+            <div class="stars-outer">
+                <div class="stars-inner" style="width: 81.60%;"></div>
+            </div>
+        </div>
+        <div class="tooltip">
+            <div class="cover-container">
+                <img src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1674418461i/65916344.jpg" class="book-cover">
+            </div>      
+         </div> 
+            <div class="book-title">Holly</div>
+            <div class="book-year">2023</div>
+            </div>
+        
+    </div>
+    
+    <div class="book-item">
+     <div class="book-cover-wrapper">
+        <div class="star-rating">
+            <div class="stars-outer">
+                <div class="stars-inner" style="width: 84.60%;"></div>
+            </div>
+        </div>
+        <div class="tooltip">
+            <div class="cover-container">
+                <img src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1699311050i/201242757.jpg" class="book-cover">
+            </div>      
+         </div> 
+            <div class="book-title">You Like It Darker</div>
+            <div class="book-year">2024</div>
+            </div>
+        
+    </div>
+    
+    <div class="book-item">
+     <div class="book-cover-wrapper">
+        <div class="star-rating">
+            <div class="stars-outer">
+                <div class="stars-inner" style="width: 76.00%;"></div>
+            </div>
+        </div>
+        <div class="tooltip">
+            <div class="cover-container">
+                <img src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1732728644i/221633230.jpg" class="book-cover">
+            </div>      
+         </div> 
+            <div class="book-title">Never Flinch</div>
+            <div class="book-year">2025</div>
+            </div>
+        
+    </div>
+    
+</div>
