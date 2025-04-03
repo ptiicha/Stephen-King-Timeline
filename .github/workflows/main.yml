@@ -22,7 +22,7 @@ jobs:
       - name: Convert notebook to HTML
         run: jupyter nbconvert --to html --output index.html Stephen_King_Timeline.ipynb
 
-      - name: Debug files (ls -la)
+      - name: Debug files
         run: ls -la
 
       - name: Check for index.html
