@@ -1,14 +1,14 @@
-name: Convert Notebook to HTML
+name: Convert and Deploy
 
 on:
   push:
     branches: [main]
 
 jobs:
-  convert:
+  build:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout repo
+      - name: Checkout repository
         uses: actions/checkout@v3
 
       - name: Set up Python
@@ -22,5 +22,13 @@ jobs:
       - name: Convert notebook to HTML
         run: jupyter nbconvert --to html --output index.html Stephen_King_Timeline.ipynb
 
-      - name: Show result
-        run: ls -la
+      - name: Commit and Push index.html
+        env:
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
+        run: |
+          git config user.name github-actions
+          git config user.email actions@github.com
+          git remote set-url origin https://${GH_TOKEN}@github.com/${{ github.repository }}
+          git add index.html
+          git diff --cached --quiet || git commit -m "Auto-update index.html"
+          git push origin HEAD
