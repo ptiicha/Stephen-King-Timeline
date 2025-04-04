@@ -4,6 +4,7 @@
 ![Status](https://img.shields.io/badge/Project-Stephen_King_Timeline-brightgreen)
 
 A Data Science project analyzing Stephen King's books with interactive timeline with sentiment analysis, word clouds, and book ratings.
+In progress...
 
 ## 💬 Overview
 This project features a visual timeline of Stephen King's books, showcasing cover images, publication years, and ratings. It uses natural language processing (NLP) for sentiment analysis of book annotations and generates word clouds based on genres and annotations.
