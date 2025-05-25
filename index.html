@@ -1,11 +1,20 @@
 
 <style>
+    html, body {
+        height: auto;
+        overflow-x: hidden;
+        overflow-y: auto;
+        margin: 0;
+        padding: 0;
+    }
     .timeline-container {
         display: flex;
         flex-wrap: nowrap;
         overflow-x: auto;
         gap: 20px;
         padding: 20px 0;
+        height: 600px;
+        
     }
     .book-item {
         display: flex;
@@ -13,7 +22,6 @@
         flex-direction: column;
         text-align: center;
         align-items: center;
-        height: 350px;
         max-width: 160px;
         position: relative;
         font-family: sans-serif;
@@ -34,9 +42,9 @@
         transition: transform 0.3s ease;
     }
     .cover-container {
-        height: 290px; /* или сколько тебе подходит */
+        height: 290px; 
         display: flex;
-        align-items: flex-start; /* чтобы обложки начинались с одной линии сверху */
+        align-items: flex-start; /* sam level for top */
         justify-content: center;
     }
     .book-cover:hover {
@@ -506,36 +514,36 @@
         <div class="book-cover-wrapper">
             <div class="star-rating">
                 <div class="stars-outer">
-                    <div class="stars-inner" style="width: 72.00%;"></div>
+                    <div class="stars-inner" style="width: 75.40%;"></div>
                 </div>
             </div>
             <div class="tooltip">
                 <div class="cover-container">
-                    <img src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1660316047i/1252583.jpg" class="book-cover">
+                    <img src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1343553923i/233666.jpg" class="book-cover">
                 </div>
                 <div class="similar-popup">
                     <div class="similar-label">Recommended</div>
                     <div class="similar-container">
                         
             <div class="similar-book">
-                <img src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1618151020i/56852407.jpg" class="similar-cover" alt="Billy Summers">
-                <div class="similar-title">Billy Summers</div>
+                <img src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1346688418i/15825932.jpg" class="similar-cover" alt="In the Tall Grass ">
+                <div class="similar-title">In the Tall Grass </div>
             </div>
             
             <div class="similar-book">
-                <img src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1554402378i/10596.jpg" class="similar-cover" alt="The Regulators">
-                <div class="similar-title">The Regulators</div>
+                <img src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1365592796i/10589.jpg" class="similar-cover" alt="Bag of Bones">
+                <div class="similar-title">Bag of Bones</div>
             </div>
             
             <div class="similar-book">
-                <img src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1739583311i/66370.jpg" class="similar-cover" alt="Rage">
-                <div class="similar-title">Rage</div>
+                <img src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1660826989i/10619.jpg" class="similar-cover" alt="Rose Madder">
+                <div class="similar-title">Rose Madder</div>
             </div>
             
                     </div>
                 </div>
             </div>
-            <div class="book-title">Roadwork</div>
+            <div class="book-title">Cujo</div>
             <div class="book-year">1981</div>
         </div>
     </div>
@@ -582,36 +590,36 @@
         <div class="book-cover-wrapper">
             <div class="star-rating">
                 <div class="stars-outer">
-                    <div class="stars-inner" style="width: 75.40%;"></div>
+                    <div class="stars-inner" style="width: 72.00%;"></div>
                 </div>
             </div>
             <div class="tooltip">
                 <div class="cover-container">
-                    <img src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1343553923i/233666.jpg" class="book-cover">
+                    <img src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1660316047i/1252583.jpg" class="book-cover">
                 </div>
                 <div class="similar-popup">
                     <div class="similar-label">Recommended</div>
                     <div class="similar-container">
                         
             <div class="similar-book">
-                <img src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1346688418i/15825932.jpg" class="similar-cover" alt="In the Tall Grass ">
-                <div class="similar-title">In the Tall Grass </div>
+                <img src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1618151020i/56852407.jpg" class="similar-cover" alt="Billy Summers">
+                <div class="similar-title">Billy Summers</div>
             </div>
             
             <div class="similar-book">
-                <img src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1365592796i/10589.jpg" class="similar-cover" alt="Bag of Bones">
-                <div class="similar-title">Bag of Bones</div>
+                <img src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1554402378i/10596.jpg" class="similar-cover" alt="The Regulators">
+                <div class="similar-title">The Regulators</div>
             </div>
             
             <div class="similar-book">
-                <img src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1660826989i/10619.jpg" class="similar-cover" alt="Rose Madder">
-                <div class="similar-title">Rose Madder</div>
+                <img src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1739583311i/66370.jpg" class="similar-cover" alt="Rage">
+                <div class="similar-title">Rage</div>
             </div>
             
                     </div>
                 </div>
             </div>
-            <div class="book-title">Cujo</div>
+            <div class="book-title">Roadwork</div>
             <div class="book-year">1981</div>
         </div>
     </div>
@@ -962,44 +970,6 @@
         <div class="book-cover-wrapper">
             <div class="star-rating">
                 <div class="stars-outer">
-                    <div class="stars-inner" style="width: 79.40%;"></div>
-                </div>
-            </div>
-            <div class="tooltip">
-                <div class="cover-container">
-                    <img src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1660827280i/13440.jpg" class="book-cover">
-                </div>
-                <div class="similar-popup">
-                    <div class="similar-label">Recommended</div>
-                    <div class="similar-container">
-                        
-            <div class="similar-book">
-                <img src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1660820449i/10628.jpg" class="similar-cover" alt="Night Shift">
-                <div class="similar-title">Night Shift</div>
-            </div>
-            
-            <div class="similar-book">
-                <img src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1332002598i/11580.jpg" class="similar-cover" alt="Creepshow">
-                <div class="similar-title">Creepshow</div>
-            </div>
-            
-            <div class="similar-book">
-                <img src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1374049003i/10617.jpg" class="similar-cover" alt="The Bachman Books">
-                <div class="similar-title">The Bachman Books</div>
-            </div>
-            
-                    </div>
-                </div>
-            </div>
-            <div class="book-title">Skeleton Crew</div>
-            <div class="book-year">1985</div>
-        </div>
-    </div>
-    
-    <div class="book-item ">
-        <div class="book-cover-wrapper">
-            <div class="star-rating">
-                <div class="stars-outer">
                     <div class="stars-inner" style="width: 83.00%;"></div>
                 </div>
             </div>
@@ -1030,6 +1000,44 @@
                 </div>
             </div>
             <div class="book-title">The Bachman Books</div>
+            <div class="book-year">1985</div>
+        </div>
+    </div>
+    
+    <div class="book-item ">
+        <div class="book-cover-wrapper">
+            <div class="star-rating">
+                <div class="stars-outer">
+                    <div class="stars-inner" style="width: 79.40%;"></div>
+                </div>
+            </div>
+            <div class="tooltip">
+                <div class="cover-container">
+                    <img src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1660827280i/13440.jpg" class="book-cover">
+                </div>
+                <div class="similar-popup">
+                    <div class="similar-label">Recommended</div>
+                    <div class="similar-container">
+                        
+            <div class="similar-book">
+                <img src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1660820449i/10628.jpg" class="similar-cover" alt="Night Shift">
+                <div class="similar-title">Night Shift</div>
+            </div>
+            
+            <div class="similar-book">
+                <img src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1332002598i/11580.jpg" class="similar-cover" alt="Creepshow">
+                <div class="similar-title">Creepshow</div>
+            </div>
+            
+            <div class="similar-book">
+                <img src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1374049003i/10617.jpg" class="similar-cover" alt="The Bachman Books">
+                <div class="similar-title">The Bachman Books</div>
+            </div>
+            
+                    </div>
+                </div>
+            </div>
+            <div class="book-title">Skeleton Crew</div>
             <div class="book-year">1985</div>
         </div>
     </div>
@@ -1418,44 +1426,6 @@
         <div class="book-cover-wrapper">
             <div class="star-rating">
                 <div class="stars-outer">
-                    <div class="stars-inner" style="width: 71.20%;"></div>
-                </div>
-            </div>
-            <div class="tooltip">
-                <div class="cover-container">
-                    <img src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1297737756i/32692.jpg" class="book-cover">
-                </div>
-                <div class="similar-popup">
-                    <div class="similar-label">Recommended</div>
-                    <div class="similar-container">
-                        
-            <div class="similar-book">
-                <img src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1365592796i/10589.jpg" class="similar-cover" alt="Bag of Bones">
-                <div class="similar-title">Bag of Bones</div>
-            </div>
-            
-            <div class="similar-book">
-                <img src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1685034954i/13451.jpg" class="similar-cover" alt="Storm of the Century">
-                <div class="similar-title">Storm of the Century</div>
-            </div>
-            
-            <div class="similar-book">
-                <img src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1674418461i/65916344.jpg" class="similar-cover" alt="Holly">
-                <div class="similar-title">Holly</div>
-            </div>
-            
-                    </div>
-                </div>
-            </div>
-            <div class="book-title">Gerald's Game</div>
-            <div class="book-year">1992</div>
-        </div>
-    </div>
-    
-    <div class="book-item ">
-        <div class="book-cover-wrapper">
-            <div class="star-rating">
-                <div class="stars-outer">
                     <div class="stars-inner" style="width: 78.80%;"></div>
                 </div>
             </div>
@@ -1486,6 +1456,44 @@
                 </div>
             </div>
             <div class="book-title">Dolores Claiborne</div>
+            <div class="book-year">1992</div>
+        </div>
+    </div>
+    
+    <div class="book-item ">
+        <div class="book-cover-wrapper">
+            <div class="star-rating">
+                <div class="stars-outer">
+                    <div class="stars-inner" style="width: 71.20%;"></div>
+                </div>
+            </div>
+            <div class="tooltip">
+                <div class="cover-container">
+                    <img src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1297737756i/32692.jpg" class="book-cover">
+                </div>
+                <div class="similar-popup">
+                    <div class="similar-label">Recommended</div>
+                    <div class="similar-container">
+                        
+            <div class="similar-book">
+                <img src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1365592796i/10589.jpg" class="similar-cover" alt="Bag of Bones">
+                <div class="similar-title">Bag of Bones</div>
+            </div>
+            
+            <div class="similar-book">
+                <img src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1685034954i/13451.jpg" class="similar-cover" alt="Storm of the Century">
+                <div class="similar-title">Storm of the Century</div>
+            </div>
+            
+            <div class="similar-book">
+                <img src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1674418461i/65916344.jpg" class="similar-cover" alt="Holly">
+                <div class="similar-title">Holly</div>
+            </div>
+            
+                    </div>
+                </div>
+            </div>
+            <div class="book-title">Gerald's Game</div>
             <div class="book-year">1992</div>
         </div>
     </div>
@@ -1798,82 +1806,6 @@
         <div class="book-cover-wrapper">
             <div class="star-rating">
                 <div class="stars-outer">
-                    <div class="stars-inner" style="width: 79.00%;"></div>
-                </div>
-            </div>
-            <div class="tooltip">
-                <div class="cover-container">
-                    <img src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1685034954i/13451.jpg" class="book-cover">
-                </div>
-                <div class="similar-popup">
-                    <div class="similar-label">Recommended</div>
-                    <div class="similar-container">
-                        
-            <div class="similar-book">
-                <img src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1365592796i/10589.jpg" class="similar-cover" alt="Bag of Bones">
-                <div class="similar-title">Bag of Bones</div>
-            </div>
-            
-            <div class="similar-book">
-                <img src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1388263466i/10607.jpg" class="similar-cover" alt="Black House">
-                <div class="similar-title">Black House</div>
-            </div>
-            
-            <div class="similar-book">
-                <img src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1377161001i/762530.jpg" class="similar-cover" alt="The Shining">
-                <div class="similar-title">The Shining</div>
-            </div>
-            
-                    </div>
-                </div>
-            </div>
-            <div class="book-title">Storm of the Century</div>
-            <div class="book-year">1999</div>
-        </div>
-    </div>
-    
-    <div class="book-item ">
-        <div class="book-cover-wrapper">
-            <div class="star-rating">
-                <div class="stars-outer">
-                    <div class="stars-inner" style="width: 72.80%;"></div>
-                </div>
-            </div>
-            <div class="tooltip">
-                <div class="cover-container">
-                    <img src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1580235339i/11564.jpg" class="book-cover">
-                </div>
-                <div class="similar-popup">
-                    <div class="similar-label">Recommended</div>
-                    <div class="similar-container">
-                        
-            <div class="similar-book">
-                <img src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1365592796i/10589.jpg" class="similar-cover" alt="Bag of Bones">
-                <div class="similar-title">Bag of Bones</div>
-            </div>
-            
-            <div class="similar-book">
-                <img src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1388263466i/10607.jpg" class="similar-cover" alt="Black House">
-                <div class="similar-title">Black House</div>
-            </div>
-            
-            <div class="similar-book">
-                <img src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1554402378i/10596.jpg" class="similar-cover" alt="The Regulators">
-                <div class="similar-title">The Regulators</div>
-            </div>
-            
-                    </div>
-                </div>
-            </div>
-            <div class="book-title">The Girl Who Loved Tom Gordon</div>
-            <div class="book-year">1999</div>
-        </div>
-    </div>
-    
-    <div class="book-item ">
-        <div class="book-cover-wrapper">
-            <div class="star-rating">
-                <div class="stars-outer">
                     <div class="stars-inner" style="width: 77.00%;"></div>
                 </div>
             </div>
@@ -1942,6 +1874,82 @@
                 </div>
             </div>
             <div class="book-title">Blood and Smoke</div>
+            <div class="book-year">1999</div>
+        </div>
+    </div>
+    
+    <div class="book-item ">
+        <div class="book-cover-wrapper">
+            <div class="star-rating">
+                <div class="stars-outer">
+                    <div class="stars-inner" style="width: 79.00%;"></div>
+                </div>
+            </div>
+            <div class="tooltip">
+                <div class="cover-container">
+                    <img src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1685034954i/13451.jpg" class="book-cover">
+                </div>
+                <div class="similar-popup">
+                    <div class="similar-label">Recommended</div>
+                    <div class="similar-container">
+                        
+            <div class="similar-book">
+                <img src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1365592796i/10589.jpg" class="similar-cover" alt="Bag of Bones">
+                <div class="similar-title">Bag of Bones</div>
+            </div>
+            
+            <div class="similar-book">
+                <img src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1388263466i/10607.jpg" class="similar-cover" alt="Black House">
+                <div class="similar-title">Black House</div>
+            </div>
+            
+            <div class="similar-book">
+                <img src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1377161001i/762530.jpg" class="similar-cover" alt="The Shining">
+                <div class="similar-title">The Shining</div>
+            </div>
+            
+                    </div>
+                </div>
+            </div>
+            <div class="book-title">Storm of the Century</div>
+            <div class="book-year">1999</div>
+        </div>
+    </div>
+    
+    <div class="book-item ">
+        <div class="book-cover-wrapper">
+            <div class="star-rating">
+                <div class="stars-outer">
+                    <div class="stars-inner" style="width: 72.80%;"></div>
+                </div>
+            </div>
+            <div class="tooltip">
+                <div class="cover-container">
+                    <img src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1580235339i/11564.jpg" class="book-cover">
+                </div>
+                <div class="similar-popup">
+                    <div class="similar-label">Recommended</div>
+                    <div class="similar-container">
+                        
+            <div class="similar-book">
+                <img src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1365592796i/10589.jpg" class="similar-cover" alt="Bag of Bones">
+                <div class="similar-title">Bag of Bones</div>
+            </div>
+            
+            <div class="similar-book">
+                <img src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1388263466i/10607.jpg" class="similar-cover" alt="Black House">
+                <div class="similar-title">Black House</div>
+            </div>
+            
+            <div class="similar-book">
+                <img src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1554402378i/10596.jpg" class="similar-cover" alt="The Regulators">
+                <div class="similar-title">The Regulators</div>
+            </div>
+            
+                    </div>
+                </div>
+            </div>
+            <div class="book-title">The Girl Who Loved Tom Gordon</div>
             <div class="book-year">1999</div>
         </div>
     </div>
@@ -2254,44 +2262,6 @@
         <div class="book-cover-wrapper">
             <div class="star-rating">
                 <div class="stars-outer">
-                    <div class="stars-inner" style="width: 80.00%;"></div>
-                </div>
-            </div>
-            <div class="tooltip">
-                <div class="cover-container">
-                    <img src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1554221361i/5093.jpg" class="book-cover">
-                </div>
-                <div class="similar-popup">
-                    <div class="similar-label">Recommended</div>
-                    <div class="similar-container">
-                        
-            <div class="similar-book">
-                <img src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1387707235i/19727005.jpg" class="similar-cover" alt="The Dark Tower VII: The Dark Tower">
-                <div class="similar-title">The Dark Tower VII: The Dark Tower</div>
-            </div>
-            
-            <div class="similar-book">
-                <img src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1697061868l/199436209.jpg" class="similar-cover" alt="The Dark Tower III: The Waste Lands">
-                <div class="similar-title">The Dark Tower III: The Waste Lands</div>
-            </div>
-            
-            <div class="similar-book">
-                <img src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1213400423i/884573.jpg" class="similar-cover" alt="The Dark Tower: The Gunslinger">
-                <div class="similar-title">The Dark Tower: The Gunslinger</div>
-            </div>
-            
-                    </div>
-                </div>
-            </div>
-            <div class="book-title">The Dark Tower VI: Song of Susannah</div>
-            <div class="book-year">2004</div>
-        </div>
-    </div>
-    
-    <div class="book-item ">
-        <div class="book-cover-wrapper">
-            <div class="star-rating">
-                <div class="stars-outer">
                     <div class="stars-inner" style="width: 85.40%;"></div>
                 </div>
             </div>
@@ -2322,6 +2292,44 @@
                 </div>
             </div>
             <div class="book-title">The Dark Tower VII: The Dark Tower</div>
+            <div class="book-year">2004</div>
+        </div>
+    </div>
+    
+    <div class="book-item ">
+        <div class="book-cover-wrapper">
+            <div class="star-rating">
+                <div class="stars-outer">
+                    <div class="stars-inner" style="width: 80.00%;"></div>
+                </div>
+            </div>
+            <div class="tooltip">
+                <div class="cover-container">
+                    <img src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1554221361i/5093.jpg" class="book-cover">
+                </div>
+                <div class="similar-popup">
+                    <div class="similar-label">Recommended</div>
+                    <div class="similar-container">
+                        
+            <div class="similar-book">
+                <img src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1387707235i/19727005.jpg" class="similar-cover" alt="The Dark Tower VII: The Dark Tower">
+                <div class="similar-title">The Dark Tower VII: The Dark Tower</div>
+            </div>
+            
+            <div class="similar-book">
+                <img src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1697061868l/199436209.jpg" class="similar-cover" alt="The Dark Tower III: The Waste Lands">
+                <div class="similar-title">The Dark Tower III: The Waste Lands</div>
+            </div>
+            
+            <div class="similar-book">
+                <img src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1213400423i/884573.jpg" class="similar-cover" alt="The Dark Tower: The Gunslinger">
+                <div class="similar-title">The Dark Tower: The Gunslinger</div>
+            </div>
+            
+                    </div>
+                </div>
+            </div>
+            <div class="book-title">The Dark Tower VI: Song of Susannah</div>
             <div class="book-year">2004</div>
         </div>
     </div>
@@ -2672,44 +2680,6 @@
         <div class="book-cover-wrapper">
             <div class="star-rating">
                 <div class="stars-outer">
-                    <div class="stars-inner" style="width: 69.40%;"></div>
-                </div>
-            </div>
-            <div class="tooltip">
-                <div class="cover-container">
-                    <img src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1347704033i/7940591.jpg" class="book-cover">
-                </div>
-                <div class="similar-popup">
-                    <div class="similar-label">Recommended</div>
-                    <div class="similar-container">
-                        
-            <div class="similar-book">
-                <img src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1618151020i/56852407.jpg" class="similar-cover" alt="Billy Summers">
-                <div class="similar-title">Billy Summers</div>
-            </div>
-            
-            <div class="similar-book">
-                <img src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1554308961i/10605.jpg" class="similar-cover" alt="Thinner">
-                <div class="similar-title">Thinner</div>
-            </div>
-            
-            <div class="similar-book">
-                <img src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1334416842i/830502.jpg" class="similar-cover" alt="It">
-                <div class="similar-title">It</div>
-            </div>
-            
-                    </div>
-                </div>
-            </div>
-            <div class="book-title">Blockade Billy</div>
-            <div class="book-year">2010</div>
-        </div>
-    </div>
-    
-    <div class="book-item ">
-        <div class="book-cover-wrapper">
-            <div class="star-rating">
-                <div class="stars-outer">
                     <div class="stars-inner" style="width: 81.40%;"></div>
                 </div>
             </div>
@@ -2748,37 +2718,37 @@
         <div class="book-cover-wrapper">
             <div class="star-rating">
                 <div class="stars-outer">
-                    <div class="stars-inner" style="width: 73.40%;"></div>
+                    <div class="stars-inner" style="width: 69.40%;"></div>
                 </div>
             </div>
             <div class="tooltip">
                 <div class="cover-container">
-                    <img src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1407138212i/12070846.jpg" class="book-cover">
+                    <img src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1347704033i/7940591.jpg" class="book-cover">
                 </div>
                 <div class="similar-popup">
                     <div class="similar-label">Recommended</div>
                     <div class="similar-container">
                         
             <div class="similar-book">
-                <img src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1304686732i/22076.jpg" class="similar-cover" alt="From a Buick 8">
-                <div class="similar-title">From a Buick 8</div>
+                <img src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1618151020i/56852407.jpg" class="similar-cover" alt="Billy Summers">
+                <div class="similar-title">Billy Summers</div>
             </div>
             
             <div class="similar-book">
-                <img src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1554402378i/10596.jpg" class="similar-cover" alt="The Regulators">
-                <div class="similar-title">The Regulators</div>
+                <img src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1554308961i/10605.jpg" class="similar-cover" alt="Thinner">
+                <div class="similar-title">Thinner</div>
             </div>
             
             <div class="similar-book">
-                <img src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1373903563i/11566.jpg" class="similar-cover" alt="The Green Mile">
-                <div class="similar-title">The Green Mile</div>
+                <img src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1334416842i/830502.jpg" class="similar-cover" alt="It">
+                <div class="similar-title">It</div>
             </div>
             
                     </div>
                 </div>
             </div>
-            <div class="book-title">Mile 81</div>
-            <div class="book-year">2011</div>
+            <div class="book-title">Blockade Billy</div>
+            <div class="book-year">2010</div>
         </div>
     </div>
     
@@ -2816,6 +2786,44 @@
                 </div>
             </div>
             <div class="book-title">11/22 1963</div>
+            <div class="book-year">2011</div>
+        </div>
+    </div>
+    
+    <div class="book-item ">
+        <div class="book-cover-wrapper">
+            <div class="star-rating">
+                <div class="stars-outer">
+                    <div class="stars-inner" style="width: 73.40%;"></div>
+                </div>
+            </div>
+            <div class="tooltip">
+                <div class="cover-container">
+                    <img src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1407138212i/12070846.jpg" class="book-cover">
+                </div>
+                <div class="similar-popup">
+                    <div class="similar-label">Recommended</div>
+                    <div class="similar-container">
+                        
+            <div class="similar-book">
+                <img src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1304686732i/22076.jpg" class="similar-cover" alt="From a Buick 8">
+                <div class="similar-title">From a Buick 8</div>
+            </div>
+            
+            <div class="similar-book">
+                <img src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1554402378i/10596.jpg" class="similar-cover" alt="The Regulators">
+                <div class="similar-title">The Regulators</div>
+            </div>
+            
+            <div class="similar-book">
+                <img src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1373903563i/11566.jpg" class="similar-cover" alt="The Green Mile">
+                <div class="similar-title">The Green Mile</div>
+            </div>
+            
+                    </div>
+                </div>
+            </div>
+            <div class="book-title">Mile 81</div>
             <div class="book-year">2011</div>
         </div>
     </div>
@@ -3204,44 +3212,6 @@
         <div class="book-cover-wrapper">
             <div class="star-rating">
                 <div class="stars-outer">
-                    <div class="stars-inner" style="width: 78.60%;"></div>
-                </div>
-            </div>
-            <div class="tooltip">
-                <div class="cover-container">
-                    <img src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1488303321i/34430839.jpg" class="book-cover">
-                </div>
-                <div class="similar-popup">
-                    <div class="similar-label">Recommended</div>
-                    <div class="similar-container">
-                        
-            <div class="similar-book">
-                <img src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1542040067i/38355410.jpg" class="similar-cover" alt="Elevation">
-                <div class="similar-title">Elevation</div>
-            </div>
-            
-            <div class="similar-book">
-                <img src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1565642120i/550844.jpg" class="similar-cover" alt="Cycle of the Werewolf">
-                <div class="similar-title">Cycle of the Werewolf</div>
-            </div>
-            
-            <div class="similar-book">
-                <img src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1365592796i/10589.jpg" class="similar-cover" alt="Bag of Bones">
-                <div class="similar-title">Bag of Bones</div>
-            </div>
-            
-                    </div>
-                </div>
-            </div>
-            <div class="book-title">Gwendy's Button Box</div>
-            <div class="book-year">2017</div>
-        </div>
-    </div>
-    
-    <div class="book-item ">
-        <div class="book-cover-wrapper">
-            <div class="star-rating">
-                <div class="stars-outer">
                     <div class="stars-inner" style="width: 74.60%;"></div>
                 </div>
             </div>
@@ -3272,6 +3242,44 @@
                 </div>
             </div>
             <div class="book-title">Sleeping Beauties</div>
+            <div class="book-year">2017</div>
+        </div>
+    </div>
+    
+    <div class="book-item ">
+        <div class="book-cover-wrapper">
+            <div class="star-rating">
+                <div class="stars-outer">
+                    <div class="stars-inner" style="width: 78.60%;"></div>
+                </div>
+            </div>
+            <div class="tooltip">
+                <div class="cover-container">
+                    <img src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1488303321i/34430839.jpg" class="book-cover">
+                </div>
+                <div class="similar-popup">
+                    <div class="similar-label">Recommended</div>
+                    <div class="similar-container">
+                        
+            <div class="similar-book">
+                <img src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1542040067i/38355410.jpg" class="similar-cover" alt="Elevation">
+                <div class="similar-title">Elevation</div>
+            </div>
+            
+            <div class="similar-book">
+                <img src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1565642120i/550844.jpg" class="similar-cover" alt="Cycle of the Werewolf">
+                <div class="similar-title">Cycle of the Werewolf</div>
+            </div>
+            
+            <div class="similar-book">
+                <img src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1365592796i/10589.jpg" class="similar-cover" alt="Bag of Bones">
+                <div class="similar-title">Bag of Bones</div>
+            </div>
+            
+                    </div>
+                </div>
+            </div>
+            <div class="book-title">Gwendy's Button Box</div>
             <div class="book-year">2017</div>
         </div>
     </div>
@@ -3694,4 +3702,14 @@
         </div>
     </div>
     
+</div>
+
+<div style="margin-top: 60px;">
+  <h2 style="text-align:center;">🔍 Stephen King Book Finder </h2>
+  <iframe 
+    src="https://27a470d30fae5e5e6e.gradio.live" 
+    width="100%" 
+    height="650" 
+    style="border:none; overflow:hidden; border-radius: 12px;">
+  </iframe>
 </div>
